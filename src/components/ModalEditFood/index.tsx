@@ -5,6 +5,7 @@ import { Form } from "./styles";
 import Modal from "../Modal";
 import Input from "../Input";
 import { IFood, IFoodOmit } from "../../types/Food";
+import { FormHandles } from "@unform/core";
 
 interface ModalEditFoodProps {
   isOpen: boolean;
@@ -19,7 +20,7 @@ export default function ModalEditFood({
   editingFood,
   handleUpdateFood,
 }: ModalEditFoodProps) {
-  const formRef = createRef();
+  const formRef = createRef<FormHandles>();
 
   async function handleSubmit(data: IFood) {
     handleUpdateFood(data);

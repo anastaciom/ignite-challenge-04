@@ -1,4 +1,4 @@
-import { Component, useEffect } from "react";
+import {useEffect } from "react";
 
 import Header from "../../components/Header";
 import api from "../../services/api";
